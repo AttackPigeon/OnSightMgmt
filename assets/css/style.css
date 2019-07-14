@@ -29,10 +29,15 @@ html, body {
     min-height: 100vh;
     flex-direction: column;
 }
+
+footer{
+    text-align: center;
+    font-size: 180%;
+}
 /* Classes */
 .navbar {
     height: 320%;
-    padding: auto;
+    padding: 0px 15px 0px 0px;
 }
 .container-fluid {
     width:100%;
@@ -42,6 +47,7 @@ html, body {
 }
 .nav-link{
     color:red;
+    font-size: 136%;
 }
 .navbar-text {
     width: 100%;
@@ -54,7 +60,12 @@ html, body {
 
 /* IDS */
 
+#employeeDropDownForm {
+    margin-top: 7%;
+}
+
 #main-heading {
     width: 30%;
     height: 100%;
+    padding: 0%;
 }
