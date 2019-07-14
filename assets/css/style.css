@@ -30,7 +30,8 @@ html, body {
     flex-direction: column;
 }
 
-footer{
+footer {
+    margin-top: 5%;
     text-align: center;
     font-size: 180%;
 }
@@ -68,4 +69,14 @@ footer{
     width: 30%;
     height: 100%;
     padding: 0%;
+}
+
+#results {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#safetyCerts {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }

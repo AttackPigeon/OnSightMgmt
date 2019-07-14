@@ -1,45 +1,225 @@
-<!DOCTYPE html>
+<!--Jenn Stuart, Chi Njoku, Arthur Spence, Ron Becker
+        Project 1
+        UTexas PTF Coding 2019 -->
 
-<head>
-        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-</head>
-
-<html>
-<body>
-<title>Fintage Quick  Hoomes</title>
-
-<nav>
-        <div class="nav-wrapper bg-primary text-white">
-          <a><img src="images\Fintage logo blue.png" style="width:50px; padding-top: 7px;" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="output.html">output</a></li>    
+        <!DOCTYPE html>
+        <html lang="en-us">
+          <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width" initial-scale=1.0>
+                            <title> Results | OnSightMgmt</title>
+                <!-- no css reset bc normalize feature integrated into bootstrap -->
+            
+                <!-- link to google fonts to make text thoroughly awesome -->
+                <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Chakra+Petch|Cormorant+Garamond|Neuton|Special+Elite&display=swap" rel="stylesheet">
+                <!-- link to bootstrap  -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+                <!-- link to materialize-->
+                <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+                <!-- link to my CSS style sheet -->
+                <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        </head>
         
-       
-          </ul>
-        </div>
-</nav>
+        <body>
+            <header class="header">
+                <div class="container-fluid">
+        
+                            <!--Setting up navbar contents-->
+                            <nav class="navbar nav-wrapper navbar-expand-sm bg-warning">
+                                <a id="main-heading" href="index.html">LOGO</a>
+                                <span class= "navbar-text text-dark">OnSight Management</span>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+        
+                                <!--Navbar collapseable menu conents-->
+                                <div class="collapse navbar-collapse" id="navbarContent">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about.html">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="future.html">Future</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="developers.html">Developers</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav> 
+                </div>
+            </header>
+                       
 <!-- start coding here -->
 
 <!-- table with a top "span" employees name  -->
 <!-- clocked in and clocked out , date and time -->
 <!-- box to submit tied to an optional email for payroll -->
 <!-- spit out safety records -->
-<span>Dudes/Chick Name</span>
+<div class= "bg-dark text-light" id="results">
+  <h1>Results</h1>
+  <h3>Employee Name: </h3>
+  
+  <div class="info well well-large">
+      <h1>Time Sheet Calculator</h1>
+      <p>Fill in the table on the left with the start and end times of a task, and the date. Then click <code>submit</code>, which will sum the hours and place them in the proceeding table.</p>
+  </div>
+
+
+  <div id="centerContainer">
+  <div class="container-fluid">
+      <!-- Example row of columns -->
+      <div class="row">
+          <div class="block-left ">
+              <form id="timeTable">
+                  <table class="span3 table table-striped">
+                      <thead>
+                          <tr>
+                              <th>Date</th>
+                              <th>Start Time</th>
+                              <th>End Time</th>
+                              <th>Additional Notes</th>
+                          </tr>
+                      </thead>
+                      <tbody id="hoursBody">
+                          <tr>
+                              <td><input class="start" type="text" placeholder="HH:MM"></td>
+                              <td><input class="end" type="text" placeholder="HH:MM"></td>
+                              <td class="date"><input class="dateInput" type="text" placeholder="mm/dd/yyyy"></td>
+                              <td class="notesTD"><input class="notesInput" type="text" placeholder="Enter Notes..."></td>
+                          </tr>
+                          <tr>
+                              <td><input class="start" type="text" placeholder="HH:MM"></td>
+                              <td><input class="end" type="text" placeholder="HH:MM"></td>
+                              <td class="date"><input class="dateInput" type="text" placeholder="mm/dd/yyyy"></td>
+                              <td class="notesTD"><input class="notesInput" type="text" placeholder="Enter Notes..."></td>
+                          </tr>
+                          <tr>
+                              <td><input class="start" type="text" placeholder="HH:MM"></td>
+                              <td><input class="end" type="text" placeholder="HH:MM"></td>
+                              <td class="date"><input class="dateInput" type="text" placeholder="mm/dd/yyyy"></td>
+                              <td class="notesTD"><input class="notesInput" type="text" placeholder="Enter Notes..."></td>
+                          </tr>
+                          <tr id="addRowTR">
+                              <td><button type="button" id="clearInputBTN" class="btn btn-primary">Clear</button></td>
+                              <td></td>
+                              <td></td>
+                              <td id="addRowTD"><button type="button" class="btn btn-success" id="addRowBTN">Add Another Row +</button></td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <br />
+              <button type="button" class="btn span3" id="hrSubmit">Submit</button>
+              </form>
+              <div id="error">This is a test error message.</div>
+          </div>
+
+          <div class="block">
+              <form id="sumTable">
+                  <table class="span4 table table-striped">
+                      <caption>Collective Sum of Your Activities:</caption>
+                      <thead>
+                          <tr>
+                              <th>Sum of Hours</th>
+                              <th>Additional Notes</th>
+                          </tr>
+                      </thead>
+                      <tbody id="hoursTable">
+                          <tr>
+                              <td>
+                                  <div class="time"><span>Hours...</span></div>
+                              </td>
+                              <td>
+                                  <div class="notesOut"><span>Notes...</span></div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="time"><span>Hours...</span></div>
+                              </td>
+                              <td>
+                                  <div class="notesOut"><span>Notes...</span></div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="time"><span>Hours...</span></div>
+                              </td>
+                              <td>
+                                  <div class="notesOut"><span>Notes...</span></div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="time"><span>Hours...</span></div>
+                              </td>
+                              <td>
+                                  <div class="notesOut"><span>Notes...</span></div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="time"><span>Hours...</span></div>
+                              </td>
+                              <td>
+                                  <div class="notesOut"><span>Notes...</span></div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="time"><span>Hours...</span></div>
+                              </td>
+                              <td>
+                                  <div class="notesOut"><span>Notes...</span></div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <div id="sumTotal">
+                      <strong>Total Time: </strong><p id="totTime">0</p><button id="clearOutputTables" class="btn btn-primary" onclick="return false;">Clear</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+      </div> <!-- /container -->
+      </div>
+
+      <div id="myChart"></div>
+
+      <div class="info well well-large">
+          <h3>Tips:</h3>
+          <p>You can enter times in any of these formats (where HH means Hours and MM means Minutes): <code>HH:MM</code>,<code>HH.MM</code>,<code>HH,MM</code>. Examples: <span class="text-error">1:15</span>, <span class="text-error">12.35</span>, <span class="text-error">7,37</span>. <br/> You can also enter 3 or 4 digit numbers, and they'll be split up into the formats <code>HMM</code> and <code>HHMM</code>. Examples: <span class="text-error">230</span> will become <span class="text-error">2:30</span>, and <span class="text-error">1012</span> will become <span class="text-error">10:12</span>.</p>
+      </div>
+
+      <hr>
+
+<!-- submit button linking an output to the a payroll and supervisor email address -->
+</div>
+
+<div class= "bg-white text-dark" id="safetyCerts">
+<h1>Safety Certifications</h1>
 <table>
-<th>Mon</th> <th>tues</th> <th>wed</th><th>thurs</th><th>fri</th><sat></sat>
-<!-- do table rows -->
+  <th>Name of Certification</th> <th>Date Certified</th> <th>Re-certify on or before</th>
 </table>
-<!-- submit button linking an output to the a payroll and supervisor email address -->\
-
-<span>Safety Certifications</span>
-
+</div>
  <!-- output all names of certificates  --> 
  <!-- initial date -->
 <!-- expiration date -->
 
 
+<!-- link to jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- link to my jscript code -->
+<script src="assets/javascript/app.js" type="text/javascript"></script>
 
-
+<footer>
+    <span>&copy;2019</span>
+    <!-- integrate self updating footer -->
+</footer>
 </body>
 </html>
