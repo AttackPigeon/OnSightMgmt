@@ -1,0 +1,60 @@
+/* Jenn Stuart, Chi Njoku, Arthur Spence, Ron Becker
+   Project 1
+   UTexas PTF Coding 2019 */
+
+   /* Fonts: 
+   font-family: 'Chakra Petch', sans-serif;
+   font-family: 'Special Elite', cursive;
+   font-family: 'Cormorant Garamond', serif;
+   font-family: 'Allerta Stencil', sans-serif;
+   font-family: 'Neuton', serif; */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family:'Allerta Stencil', sans-serif;
+    line-height: 1.5;
+    color: whitesmoke;
+    height: 100%;
+
+    /*Scale image based on window size*/
+    background-image: url("../images/background/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+     
+    /*Properties for sticky footer, flexbox for variable height*/
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+/* Classes */
+.navbar {
+    height: 320%;
+    padding: auto;
+}
+.container-fluid {
+    width:100%;
+    margin:0;
+    padding:0;
+    height: 45%;
+}
+.nav-link{
+    color:red;
+}
+.navbar-text {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    font-size: 340%;
+}
+
+
+/* IDS */
+
+#main-heading {
+    width: 30%;
+    height: 100%;
+}
