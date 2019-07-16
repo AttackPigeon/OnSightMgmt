@@ -9,15 +9,26 @@
       <meta name="viewport" content="width=device-width" initial-scale=1.0>
                     <title>OnSightMgmt</title>
         <!-- no css reset bc normalize feature integrated into bootstrap -->
-    
-        <!-- link to google fonts to make text thoroughly awesome -->
+             <!-- link to google fonts to make text thoroughly awesome -->
         <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Chakra+Petch|Cormorant+Garamond|Neuton|Special+Elite&display=swap" rel="stylesheet">
         <!-- link to bootstrap  -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- link to materialize-->
         <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!-- link to my CSS style sheet -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+      <!-- dropdown button script -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
 </head>
 
 <body>
@@ -26,7 +37,7 @@
 
                     <!--Setting up navbar contents-->
                     <nav class="navbar nav-wrapper navbar-expand-sm bg-warning">
-                        <a id="main-heading" href="workinglogo.png"><img style=" height:50px; width: 150px;" src="assets\images\logoworking.png" alt="logo"></img></a>
+                        <a id="main-heading" href="index.html">LOGO</a>
                         <span class= "navbar-text text-dark">OnSight Management</span>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -53,49 +64,38 @@
                         </div>
                     
                     </nav> 
-        </div>
+          </div>
     </header>
-               
-    
-
-<div id="employeeDropDownForm" class="bg-dark"> 
-    <h1>Select Employee:</h1>
-        <div class="dropdown row justify-content-center">
-                <button onclick="myFunction()" class="dropbtn bg-warning text-danger"> Employee List </button>
-                <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Employee 1</a>
-                        <a href="#">Employee 2</a>
-                        <a href="#">Employee 3</a>
-                        <a href="#">Employee 4</a>
-                        <a href="#">Employee 5</a>
-                        <a href="#">Employee 6</a>
-                        <a href="#">Employee 7</a>
-                        <a href="#">Employee 8</a>
-                        <a href="#">Employee 9</a>
-                        <a href="#">Employee 10</a>
-                </div>
-              </div>
-              <!-- Arthur I have references for this jscript as well -->
-
-        
-<!-- Form with a drop down menu with "FAKER" 10 employees  (THE INPUT)--> 
-<!-- <div class="dropdown">
-
-
-
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Employee List
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Joe Snuffy</a></li>
+        <li><a href="#">Mickey Mouse</a></li>
+        <li><a href="#">Goofy</a></li>
+        <li><a href="#">Pluto</a></li>
+        <li><a href="#">Donald Duck</a></li>
+        <li><a href="#">Mario Mario</a></li>
+        <li><a href="#">Luigi Mario</a></li>
+        <li><a href="#">Leonardo Turtle</a></li>
+        <li><a href="#">Rafael Turtle</a></li>
+        <li><a href="#">Donatello Turtle</a></li>
+        <li><a href="#">Michaelanjelo Turtle</a></li>
+        <li><a href="#">Jimmy Hendrix</a></li>
+        <li><a href="#">Stevie Rae Vahn</a></li>
+        <li><a href="#">Jonny Rocket</a></li>
+        <li><a href="#">Britney Spears</a></li>
+        <li><a href="#">Michael Jackson</a></li>
+        <li><a href="#">Michael Vick</a></li>
+      </ul>
+    </div>
   </div>
-</div>
-</div> (Mve to each employee)-->
-
-
-
+  
 
 
 <!-- link to jquery -->
@@ -131,17 +131,17 @@
 
             <div>
                 <i class="fa fa-map-marker"></i>
-                <p><span>21 Revolution Street</span> Paris, France</p>
+                <p><span>2405 Robert Dedman Dr, </span> Austin, TX 78712</p>
             </div>
 
             <div>
                 <i class="fa fa-phone"></i>
-                <p>+1 555 123456</p>
+                <p>1-800-on-site</p>
             </div>
 
             <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">support@company.com</a></p>
+                <p><a href="mailto:onsight@onsight.com">onsite@onsite.com</a></p>
             </div>
 
         </div>
@@ -150,7 +150,7 @@
 
             <p class="footer-company-about">
                 <span>About the company</span>
-                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                We are the Payroll and Training Tracking APP
             </p>
 
             <div class="footer-icons">
