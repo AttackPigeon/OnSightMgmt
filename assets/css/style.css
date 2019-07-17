@@ -30,6 +30,9 @@ html, body {
     flex-direction: column;
 }
 
+.logo {
+    width:20%; height: 20%"
+}
 footer {
     margin-top: 5%;
     text-align: center;
