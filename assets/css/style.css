@@ -16,13 +16,15 @@ html, body {
     line-height: 1.5;
     color: whitesmoke;
     height: 100%;
+    
 
     /*Scale image based on window size*/
-    background-image: url("../images/background/background.jpg");
+    background-image: url("../images/background/background.jpg") ;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    image: opacity: 0.4; 
 
     /*Properties for sticky footer, flexbox for variable height*/
     display: flex;
@@ -42,8 +44,13 @@ footer {
 }
 /* Classes */
 .navbar {
-    height: 320%;
+    height: 15%;
     padding: 0px 1% 0px 0px;
+    /* position: fixed; */
+    
+    position:fixed;
+   
+    z-index: +2;
 }
 .container-fluid {
     width:100%;
@@ -53,14 +60,15 @@ footer {
 }
 .nav-link{
     color:red;
-    font-size: 136%;
+    font-size: 120%;
 }
 .navbar-text {
     width: 100%;
     left: 0;
     text-align: center;
     margin: auto;
-    font-size: 340%;
+    font-size: 320%;
+
 }
 /* Dropdown Button */
 .dropbtn {
@@ -143,9 +151,9 @@ footer {
     height: 20%;
 	text-align: left;
 	font: bold 16px sans-serif;
-
 	padding: 5px 5px;
-	margin-top: 5px;
+    margin-top: 3
+    %;
 }
 
 .footer-distributed .footer-left,

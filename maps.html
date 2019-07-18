@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+  
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+       // Your web app's Firebase configuration
+
+ var firebaseConfig = {
+   apiKey: "AIzaSyDBx5u4rSdOw4OV1mom78WhUzNtnkLBiRA",
+   authDomain: "onsight-app-2ace8.firebaseapp.com",
+   databaseURL: "https://onsight-app-2ace8.firebaseio.com",
+   projectId: "onsight-app-2ace8",
+   storageBucket: "",
+   messagingSenderId: "693732910068",
+   appId: "1:693732910068:web:37dbf37636631e78"
+ };
+
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+ var database = firebase.database();
+ database.ref("/location").on("child_added", function(snapshot){
+   var location = snapshot.val();
+   var latLng = new google.maps.LatLng(location.lat,location.lng);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+          console.log(map);
+          map.center=latLng;
+          console.log(marker);
+   console.log(location);
+ })
+      var map;
+      function initMap() {
+       map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 5,
+         center: new google.maps.LatLng(31,-99),
+         mapTypeId: 'terrain'
+       });
+
+      }
+
+      // Loop through the results array and place a marker for each
+      // set of coordinates.
+      window.eqfeed_callback = function(location) {
+        for (var i = 0; i < location.features.length; i++) {
+          var coords = results.features[i].geometry.coordinates;
+          
+        }
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqL2RAG8axVVbnqeTNo_w0Lijcbzy_bb4&callback=initMap">
+    </script>
+    
+  </body>
+</html>
