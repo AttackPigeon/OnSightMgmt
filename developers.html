@@ -1,4 +1,4 @@
-<!--Jenn Stuart, Chi Njoku, Arthur Spence, Ron Becker
+<!--, , , Ron Becker
     Project 1
     UTexas PTF Coding 2019 -->
 
@@ -23,6 +23,7 @@
             <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
           <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
           <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+          <href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
             
     <body>
@@ -30,7 +31,7 @@
             <div class="container-fluid">
                                 <!--Setting up navbar contents-->
                 <nav class="navbar nav-wrapper navbar-expand-sm bg-warning">
-                    <a id="main-heading" href="index.html">LOGO</a>
+                    <a id="main-heading" href="index.html"><img class="logo" src="assets\images\logo\logo.png"; alt="LOGO";></a>
                     <span class= "navbar-text text-dark">OnSight Management</span>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -58,70 +59,147 @@
                 </nav> 
             </div>
         </header>
-        <footer>
-                <footer class="footer-distributed">
-            
-                    <div class="footer-left" style="margin-bottom: 125px;">
-            
-                        <h3 style="margin-top: -190px;">Onsight<span>logo</span></h3>
-            
-                        <p style="margin-top: -1px;" class="footer-links">
-                            <a href="#">Home</a>
-                            ·
-                            <a href="#">Blog</a>
-                            ·
-                            <a href="#">Pricing</a>
-                            ·
-                            <a href="#">About</a>
-                            ·
-                            <a href="#">Faq</a>
-                            ·
-                            <a href="#">Contact</a>
-                        </p>
-            
-                        <p class="footer-company-name" >OnSight Development Project &copy; 2019</p>
-                    </div>
-            
-                    <div class="footer-center" style=" margin-bottom: 200px">
-            
-                        <div>
-                            <i class="fa fa-map-marker"></i>
-                            <p ><span>2405 Robert Dedman Dr, </span> Austin, TX 78712</p>
-                        </div>
-            
-                        <div>
-                            <i class="fa fa-phone"></i>
-                            <p >1-800-on-site</p>
-                        </div>
-            
-                        <div>
-                            <i class="fa fa-envelope"></i>
-                            <p ><a href="mailto:onsight@onsight.com">onsite@onsite.com</a></p>
-                        </div>
-            
-                    </div>
-            
-                    <div class="footer-right" style=" margin-bottom: 120px">
-            
-                        <p class="footer-company-about">
-                            <span>About the company</span>
-                            We are the Payroll and Training Tracking APP
-                        </p>
-            
-                        <div class="footer-icons" style="margin-bottom: 30px;">
-            
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-github"></i></a>
-            
-                        </div>
-            
-                    </div>
-            
-              
-            </footer>
 
+        <style>
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              max-width: 20%;
+              margin: auto;
+              text-align: center;
+              font-family: arial;
+              float: left;
+              position: relative;
+              margin-left: 4%;
+              margin-top: 5%;
+              margin-bottom: 5%;
+       
+            }
+            #developersCards{
+                margin-top: 10%;
+            text-align:center; 
+            background-color: Black; 
+            border-bottom: -99px;
+            width: 40%;
+            margin-left: 30%; 
+            margin-right: 30%; 
+            border-color: black; 
+            border-style: solid; 
+            border-width: 2px; width: 30%;
+            height: 12%; 
+            align-content: center;
+            color: #ffc107;
+                }
+
+                .photo{
+                    width: 90%;
+                    margin-left:5%;
+                    margin-right: 5%;
+                    margin-top: 5%;
+                }
+            .johnDoe {
+             color: black;
+                }
+            #cardBackground{
+                background: gray;
+                margin-top: -5%;
+                height: 500px;
+            }
+            
+            .title {
+            
+              color:Black;
+              font-size: 20px;
+              
+            }
+            
+            button {
+              border: none;
+              outline: 0;
+              display: inline-block;
+              padding: 8px;
+              color: white;
+              background-color: #000;
+              text-align: center;
+              cursor: pointer;
+              width: 80%;
+              font-size: 18px;
+            }
+            
+            a {
+              text-decoration: none;
+              font-size: 22px;
+              color: black;
+            }
+            
+            button:hover, a:hover {
+              opacity: 0.7;
+            }
+            </style>
+            </head>
+            <body>
+            
+           
+           <div id="cardBackground" style="background-color: black; height: 93%;">
+            <h1 id="developersCards">Developers</h1>
+            <div class="card">
+                <img class="photo"; src="assets\images\developer photos\kcbeck photo.jpg" alt="John">
+                <h4 class="johnDoe">Chi Njoku</h4>
+                <p class="title">JavaScipt Developer</p>
+                <p class="johnDoe">University of Texas</p>
+                <div style="margin: 12px 0;">
+                  <a href="#"><i class="fa fa-dribbble"></i></a> 
+                  <a href="#"><i class="fa fa-twitter"></i></a>  
+                  <a href="#"><i class="fa fa-linkedin"></i></a>  
+                  <a href="#"><i class="fa fa-facebook"></i></a> 
+                </div>
+                <p><button>Contact</button></p>
+              </div>
+
+            
+            <div class="card">
+                <img class="photo"; src="assets\images\developer photos\kcbeck photo.jpg" alt="John">
+                <h4 class="johnDoe">Arthur Spence</h4>
+                <p class="title">JS and Firebase Developer</p>
+                <p class="johnDoe">University of Texas</p>
+                <div style="margin: 12px 0;">
+                  <a href="#"><i class="fa fa-dribbble"></i></a> 
+                  <a href="#"><i class="fa fa-twitter"></i></a>  
+                  <a href="#"><i class="fa fa-linkedin"></i></a>  
+                  <a href="#"><i class="fa fa-facebook"></i></a> 
+                </div>
+                <p><button>Contact</button></p>
+              </div>
+
+              <div class="card">
+                <img class="photo"; src="assets\images\developer photos\kcbeck photo.jpg" alt="John">
+                <h4 class="johnDoe">Jenn Stuart</h4>
+                <p class="title">CSS/JS Developer</p>
+                <p class="johnDoe">University of Texas</p>
+                <div style="margin: 12px 0;">
+                  <a href="#"><i class="fa fa-dribbble"></i></a> 
+                  <a href="#"><i class="fa fa-twitter"></i></a>  
+                  <a href="#"><i class="fa fa-linkedin"></i></a>  
+                  <a href="#"><i class="fa fa-facebook"></i></a> 
+                </div>
+                <p><button>Contact</button></p>
+              </div>
+
+
+              <div class="card">
+                <img class="photo"; src="assets\images\developer photos\kcbeck photo.jpg" alt="John">
+                <h4 class="johnDoe">KC Beck</h4>
+                <p class="title">Creative Developer</p>
+                <p class="johnDoe">University of Texas</p>
+                <div style="margin: 12px 0;">
+                  <a href="#"><i class="fa fa-dribbble"></i></a> 
+                  <a href="#"><i class="fa fa-twitter"></i></a>  
+                  <a href="#"><i class="fa fa-linkedin"></i></a>  
+                  <a href="#"><i class="fa fa-facebook"></i></a> 
+                </div>
+                <p><button>Contact</button></p>
+              </div>
+
+        </div> 
 
 
 
@@ -135,7 +213,7 @@
         
                 <div class="footer-left" style="margin-bottom: 125px;">
         
-                    <h3 style="margin-top: -190px;">Onsight<span>logo</span></h3>
+                    <h3 style="margin-top: -190px;">Onsight<span>MGMT</span></h3>
         
                     <p style="margin-top: -1px;" class="footer-links">
                         <a href="#">Home</a>
@@ -188,8 +266,7 @@
                         <a href="#"><i class="fa fa-github"></i></a>
         
                     </div>
-        
-                </div>
+                           </div>
         
           
         </footer>
