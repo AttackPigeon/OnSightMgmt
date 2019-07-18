@@ -21,15 +21,22 @@
                   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
           <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                 <!-- Moment.js Reference -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+             <!-- Firebase Reference -->
+             <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+             <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
         </head>
+
         
         <body>
             <header class="header">
                 <div class="container-fluid">
         
                             <!--Setting up navbar contents-->
-                            <nav class="navbar nav-wrapper navbar-expand-sm bg-warning">
-                                <a id="main-heading" href="index.html">LOGO</a>
+                            <nav class="navbar nav-wrapper navbar-expand-sm bg-warning" style="position: top">
+                                <a id="main-heading" href="index.html"><img class="logo" src="assets\images\logo\logo.png" alt="LOGO" ></a>
                                 <span class= "navbar-text text-dark">OnSight Management</span>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
@@ -64,6 +71,13 @@
 <!-- clocked in and clocked out , date and time -->
 <!-- box to submit tied to an optional email for payroll -->
 <!-- spit out safety records -->
+<style>
+    body{
+        Background-color: white;
+    };
+
+</style>
+
 <div class= "bg-dark text-light" id="results">
   <h1>Results</h1>
   <h3>Employee Name: </h3>
@@ -73,11 +87,214 @@
       <p>Fill in the table on the left with the start and end times of a task, and the date. Then click <code>submit</code>, which will sum the hours and place them in the proceeding table.</p>
   </div>
 
+  <style>
+    #employee-table th,
+    td {
+      display: inline-block;
+      width: 16.575%;
+      background-color: white;
+    }
+    .bg-dark{
+        background-color: white;
+    }
+  </style>
+</head>
 
-  <div id="centerContainer">
-  <div class="container-fluid">
-      <!-- Example row of columns -->
-      <div class="row">
+<body>
+
+  <!-- Employee Tracker -->
+  <div class="container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="background-color: black; color: white">
+      <h1 class="text-center">Onsight</h1>
+      <h3 class="text-center">A Comprehensive Directory of Employee Billable Hours</h3>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <!-- Current Employees-->
+        <div class="card mb-4" style="color: #495057;">
+          <div class="card-header">Current Employees</div>
+          <div class="card-body">
+            <table class="table table-sm table-hover" id='employee-table'>
+              <thead>
+                <tr>
+                  <th scope="col">Employee Name</th>
+                  <th scope="col">Employee ID</th>
+                  <th scope="col">Start Time</th>
+                  <th scope="col">Hours Worked</th>
+                  <th scope="col">Hourly Rate ($)</th>
+                  <th scope="col">Total Billed ($)</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Add Employee  -->
+        <div class="card mb-4">
+          <div class="card-header">Add Employee</div>
+          <div class="card-body">
+
+            <!-- Entry Form -->
+            <form>
+              <div class="form-group">
+                <label for="employee-name-input">Employee ID</label>
+                <input class="form-control" id="employee-id-input" placeholder="51" type="number">
+              </div>
+              <div class="form-group">
+                <label for="role-input">Employee Name</label>
+                <input class="form-control" id="employee-name-input" placeholder="Jane Doe" type="text">
+              </div>
+              <div class="form-group">
+                <label for="start-input">Start Time</label>
+                <input class="form-control" id="start-input" placeholder="HH:mm" type="date-time">
+              </div>
+              <div class="form-group">
+                <label for="rate-input">Hourly Rate</label>
+                <input class="form-control" id="rate-input" placeholder="36" type="number">
+              </div>
+              <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+  // Steps to complete:
+
+// 1. Initialize Firebase
+// 2. Create button for adding new employees - then update the html + update the database
+// 3. Create a way to retrieve employees from the employee database.
+// 4. Create a way to calculate the months worked. Using difference between start and current time.
+//    Then use moment.js formatting to set difference in months.
+// 5. Calculate Total billed
+
+// 1. Initialize Firebase
+var firebaseConfig = {
+  apiKey: "AIzaSyDBx5u4rSdOw4OV1mom78WhUzNtnkLBiRA",
+  authDomain: "onsight-app-2ace8.firebaseapp.com",
+  databaseURL: "https://onsight-app-2ace8.firebaseio.com",
+  projectId: "onsight-app-2ace8",
+  storageBucket: "",
+  messagingSenderId: "693732910068",
+  appId: "1:693732910068:web:37dbf37636631e78"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var database = firebase.database();
+// 2. Button for adding Employees
+$("#add-employee-btn").on("click", function(event) {
+  event.preventDefault();
+
+  // Grabs user input
+  var empID = $("#employee-id-input").val().trim();
+  var empName = $("#employee-name-input").val().trim();
+  var empStart = $("#start-input").val().trim();
+  var empRate = $("#rate-input").val().trim();
+
+  var formatedDate = moment(empStart, "hh:mm").format("HH:mm");
+  console.log(formatedDate)
+
+  console.log(empID)
+
+  // Creates local "temporary" object for holding employee data
+  var newEmp = {
+    id: empID,
+    name: empName,
+    // start: empStart,
+    rate: empRate
+  };
+
+  // Uploads employee data to the database
+  database.ref().push(newEmp);
+
+  // Logs everything to console
+  console.log(newEmp.ID);
+  console.log(newEmp.Name);
+  console.log(newEmp.start);
+  console.log(newEmp.rate);
+
+  alert("Employee successfully added");
+
+  // Clears all of the text-boxes
+  $("#employee-id-input").val("");
+  $("#employee-name-input").val("");
+  $("#start-input").val("");
+  $("#rate-input").val("");
+});
+
+// 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
+database.ref().on("child_added", function(childSnapshot) {
+  console.log(childSnapshot.val());
+
+  // Store everything into a variable.
+  var empID = childSnapshot.val().id;
+  var empName = childSnapshot.val().name;
+  var empStart = childSnapshot.val().start;
+  var empRate = childSnapshot.val().rate;
+
+  // Employee Info
+  console.log(empID);
+  console.log(empName);
+  console.log(empStart);
+  console.log(empRate);
+
+  // Prettify the employee start
+  var empStartPretty = moment.unix(empStart).format("HH:mm");
+
+  // Calculate the months worked using hardcore math
+  // To calculate the months worked
+  var empMonths = moment().diff(moment(empStart, "X"), "hours");
+  console.log(empMonths);
+
+  // Calculate the total billed rate
+  var empBilled = empMonths * empRate;
+  console.log(empBilled);
+
+  // Create the new row
+  var newRow = $("<tr>");
+  
+   newRow.append($("<td>").text(empName));
+   newRow.append($("<td>").text(empID));
+   newRow.append($("<td>").text(empStartPretty));
+   newRow.append($("<td>").text(empStart));
+   newRow.append($("<td>").text(empRate));
+   newRow.append($("<td>").text(empBilled));
+    
+  
+
+  // Append the new row to the table
+  $("#employee-table > tbody").append(newRow);
+});
+
+// Example Time Math
+// -----------------------------------------------------------------------------
+// Assume Employee start date of January 1, 2015
+// Assume current date is March 1, 2016
+
+// We know that this is 15 months.
+// Now we will create code in moment.js to confirm that any attempt we use meets this test case
+  </script>
+
+  <!-- <div id="centerContainer">
+  <div class="container-fluid">Example row of columns -->
+      <!-- <div class="row">
           <div class="block-left ">
               <form id="timeTable">
                   <table class="span3 table table-striped">
@@ -120,9 +337,9 @@
               <button type="button" class="btn span3" id="hrSubmit">Submit</button>
               </form>
               <div id="error">This is a test error message.</div>
-          </div>
+          </div> -->
 
-          <div class="block">
+          <!-- <div class="block">
               <form id="sumTable">
                   <table class="span4 table table-striped">
                       <caption>Collective Sum of Your Activities:</caption>
@@ -190,15 +407,15 @@
           </div>
       </div>
       </div> <!-- /container -->
-      </div>
+      </div> -->
 
-      <div id="myChart"></div>
+      <!-- <div id="myChart"></div> -->
 
     
       
 
 <!-- submit button linking an output to the a payroll and supervisor email address -->
-</div>
+<!-- </div> --> -->
 
 <div class= "bg-white text-dark" id="safetyCerts">
 <h1>Safety Certifications</h1>
