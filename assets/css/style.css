@@ -31,7 +31,7 @@ html, body {
 }
 
 .logo {
-    width:8; height: 8%;
+    width: 12%; height: 8%;
 
 
 }
@@ -43,7 +43,7 @@ footer {
 /* Classes */
 .navbar {
     height: 320%;
-    padding: 0px 15px 0px 0px;
+    padding: 0px 1% 0px 0px;
 }
 .container-fluid {
     width:100%;
