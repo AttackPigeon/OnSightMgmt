@@ -13,7 +13,7 @@ var firebaseConfig = {
   // Initialize Firebase
   var fbProject;
 
-  console.log(firebase);
+  console.log(firebaseConfig);
   if (!firebase.apps.length) {
     fbProject = firebase.initializeApp(firebaseConfig);
   }
