@@ -116,6 +116,10 @@ footer {
 
 /* IDS */
 
+#dropdowndiv {
+    margin-top: 7%;
+}
+
 #employeeDropDownForm {
     margin-top: 7%;
 }
