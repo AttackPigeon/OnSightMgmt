@@ -2,6 +2,8 @@
 // Project 1
 // UTexas PTF Coding 2019
 
+console.log("connected");
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyDBx5u4rSdOw4OV1mom78WhUzNtnkLBiRA",
@@ -13,20 +15,22 @@ var firebaseConfig = {
     appId: "1:693732910068:web:37dbf37636631e78"
   };
   // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
   var fbProject;
 
-  console.log(firebaseConfig);
-  if (!firebaseConfig.length) {
-    fbProject = firebaseConfig.initialize(firebaseConfig);
-  }
+  // console.log(firebase);
+  // if (!firebase.length) {
+  //   var fbProject = firebase.initializeApp(firebaseConfig);
+  // }
   //var fbProject = firebase.initializeApp(firebaseConfig);
   console.log("Post init");
-  console.log("project name : "+ fbProject.name);
+  // console.log("project name : "+ fbProject.name());
 
   var database = firebase.database();
  
-  var location
+  var location;
   var map;
+
   function createMap() {
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 2,
@@ -64,6 +68,9 @@ var firebaseConfig = {
           });
         }
       }
+
+// please add the reference to the function below to the strt button in the index.html file"
+
 function onClockIn(){
 
       var queryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDqL2RAG8axVVbnqeTNo_w0Lijcbzy_bb4";

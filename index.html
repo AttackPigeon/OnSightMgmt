@@ -18,23 +18,28 @@
             <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Chakra+Petch|Cormorant+Garamond|Neuton|Special+Elite&display=swap" rel="stylesheet">
 
 <!-- WHY DO WE HAVE TWO DIFFERENT VERSIONS OF BOOTSTRAP-ONE IN HEAD AND ONE AS SCRIPT TAG AT END? -->
-                    <!-- link to bootstrap -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-                    <!-- link to jquery -->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+                    <!-- links to bootstrap  --> 
+                    <!-- bootstrap js bundle -->
+            <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script> -->
+                 <!-- bootstrap javascript -->
+            <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+                    <!-- bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+                     <!-- link to jquery -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
                     <!-- link to materialize-->
             <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
                     
 
-                <!-- Bootstrap Font awesome -->
+                    <!-- Bootstrap Font awesome -->
             <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-            <!-- removed (2) links below with no changes -->
-          <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
-          <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+                    <!-- removed (2) links below with no changes -->
+            <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+            <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 
-          <!-- link to my CSS style sheet-always LAST -->
+                <!-- link to my CSS style sheet-always LAST -->
             <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
 
@@ -101,14 +106,17 @@
     
     <br>
     <br>
+    <div>
     <div id="display" class="boldest">00:00</div>
     <br>
     <br>
       <div id="buttons">
-        <button id="start" class="btn btn-primary">Employee Clock In</button>
+          <!-- someone add reference to onclick to trigger geolocation -->
+        <button id="start" onclick="onClockIn" class="btn btn-primary">Employee Clock In</button>
         <button id="stop" class="btn btn-primary">Employee Clock Out</button>
         <button id="reset" class="btn btn-primary">Clear Time</button>
       </div>
+    </div>
     <br> 
     <br>
     <div id= "visuals">
