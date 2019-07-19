@@ -14,8 +14,8 @@ var firebaseConfig = {
   var fbProject;
 
   console.log(firebaseConfig);
-  if (!firebaseConfig.apps.length) {
-    fbProject = firebase.initializeApp(firebaseConfig);
+  if (!firebaseConfig.length) {
+    fbProject = firebaseConfig.initialize(firebaseConfig);
   }
   //var fbProject = firebase.initializeApp(firebaseConfig);
   console.log("Post init");
