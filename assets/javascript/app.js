@@ -1,4 +1,6 @@
- 
+// Jenn Stuart, Chi Njoku, Arthur Spence, Ron Becker
+// Project 1
+// UTexas PTF Coding 2019
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
