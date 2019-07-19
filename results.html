@@ -77,6 +77,27 @@
     };
 
 </style>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+          height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+ <div id="map"></div>
+
+ <script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqL2RAG8axVVbnqeTNo_w0Lijcbzy_bb4&callback=initMap">
+ </script>
+
+
+
 
 <div class= "bg-dark text-light" id="results">
   <h1>Results</h1>
@@ -290,132 +311,9 @@ database.ref().on("child_added", function(childSnapshot) {
 
 // We know that this is 15 months.
 // Now we will create code in moment.js to confirm that any attempt we use meets this test case
+  
+  
   </script>
-
-  <!-- <div id="centerContainer">
-  <div class="container-fluid">Example row of columns -->
-      <!-- <div class="row">
-          <div class="block-left ">
-              <form id="timeTable">
-                  <table class="span3 table table-striped">
-                      <thead>
-                          <tr>
-                              <th>Start Time</th>
-                              <th>End Time</th>
-                              <th>Date</th>
-                              <th>Additional Notes</th>
-                          </tr>
-                      </thead>
-                      <tbody id="hoursBody">
-                          <tr>
-                              <td><input class="start" type="text" placeholder="HH:MM"></td>
-                              <td><input class="end" type="text" placeholder="HH:MM"></td>
-                              <td class="date"><input class="dateInput" type="text" placeholder="mm/dd/yyyy"></td>
-                              <td class="notesTD"><input class="notesInput" type="text" placeholder="Enter Notes..."></td>
-                          </tr>
-                          <tr>
-                              <td><input class="start" type="text" placeholder="HH:MM"></td>
-                              <td><input class="end" type="text" placeholder="HH:MM"></td>
-                              <td class="date"><input class="dateInput" type="text" placeholder="mm/dd/yyyy"></td>
-                              <td class="notesTD"><input class="notesInput" type="text" placeholder="Enter Notes..."></td>
-                          </tr>
-                          <tr>
-                              <td><input class="start" type="text" placeholder="HH:MM"></td>
-                              <td><input class="end" type="text" placeholder="HH:MM"></td>
-                              <td class="date"><input class="dateInput" type="text" placeholder="mm/dd/yyyy"></td>
-                              <td class="notesTD"><input class="notesInput" type="text" placeholder="Enter Notes..."></td>
-                          </tr>
-                          <tr id="addRowTR">
-                              <td><button type="button" id="clearInputBTN" class="btn btn-primary">Clear</button></td>
-                              <td></td>
-                              <td></td>
-                              <td id="addRowTD"><button type="button" class="btn btn-success" id="addRowBTN">Add Another Row +</button></td>
-                          </tr>
-                      </tbody>
-                  </table>
-                  <br />
-              <button type="button" class="btn span3" id="hrSubmit">Submit</button>
-              </form>
-              <div id="error">This is a test error message.</div>
-          </div> -->
-
-          <!-- <div class="block">
-              <form id="sumTable">
-                  <table class="span4 table table-striped">
-                      <caption>Collective Sum of Your Activities:</caption>
-                      <thead>
-                          <tr>
-                              <th>Sum of Hours</th>
-                              <th>Additional Notes</th>
-                          </tr>
-                      </thead>
-                      <tbody id="hoursTable">
-                          <tr>
-                              <td>
-                                  <div class="time"><span>Hours...</span></div>
-                              </td>
-                              <td>
-                                  <div class="notesOut"><span>Notes...</span></div>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="time"><span>Hours...</span></div>
-                              </td>
-                              <td>
-                                  <div class="notesOut"><span>Notes...</span></div>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="time"><span>Hours...</span></div>
-                              </td>
-                              <td>
-                                  <div class="notesOut"><span>Notes...</span></div>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="time"><span>Hours...</span></div>
-                              </td>
-                              <td>
-                                  <div class="notesOut"><span>Notes...</span></div>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="time"><span>Hours...</span></div>
-                              </td>
-                              <td>
-                                  <div class="notesOut"><span>Notes...</span></div>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="time"><span>Hours...</span></div>
-                              </td>
-                              <td>
-                                  <div class="notesOut"><span>Notes...</span></div>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-                  <div id="sumTotal">
-                      <strong>Total Time: </strong><p id="totTime">0</p><button id="clearOutputTables" class="btn btn-primary" onclick="return false;">Clear</button>
-                  </div>
-              </form>
-          </div>
-      </div>
-      </div> <!-- /container -->
-      </div> -->
-
-      <!-- <div id="myChart"></div> -->
-
-    
-      
-
-<!-- submit button linking an output to the a payroll and supervisor email address -->
-<!-- </div> --> -->
 
 <div class= "bg-white text-dark" id="safetyCerts">
 <h1>Safety Certifications</h1>
@@ -429,14 +327,7 @@ database.ref().on("child_added", function(childSnapshot) {
 
 <br>
 
-<div class= "d-flex justify-content-between bg-dark text-light" id= "visuals">
-    <!-- two realtime visual displays side by side -->
-        <div id="map"> bla bla bla maps</div>
-        <!-- add margins and padding in CSS -->
-        <div id="geo">bla bla bla geo</div>
-        </div>
-        
-        
+
         
 
 <!-- link to jquery -->
