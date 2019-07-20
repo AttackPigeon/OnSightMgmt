@@ -171,14 +171,15 @@ footer {
 
 /* CSS FOoter Code */
 .footer-distributed{
- position: fixed;
- bottom: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    position: fixed;
+    bottom: 0;
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
-	font: bold 100% sans-serif;
+	font: bold 100%;
     padding-left: 1%;
     padding-top: -1%;
  
@@ -201,24 +202,28 @@ footer {
 /* The company logo */
 
 .footer-distributed h3{
+    font-family: 'Chakra Petch', sans-serif;
 	color:  #ffffff;
-	font: normal 100% 'Cookie', cursive;
+	font: normal 100%;
 	margin: 0;
 }
 
 .footer-distributed h3 span{
+    font-family: 'Chakra Petch', sans-serif;
 	color:  #5383d3;
 }
 
 /* Footer links */
 
 .footer-distributed .footer-links{
+    font-family: 'Chakra Petch', sans-serif;
 	color:  #ffffff;
 	margin: 5% 0 1em;
 	padding: 0;
 }
 
 .footer-distributed .footer-links a{
+    font-family: 'Chakra Petch', sans-serif;
 	display:inline-block;
 	line-height: 1.8;
 	text-decoration: none;
@@ -226,6 +231,7 @@ footer {
 }
 
 .footer-distributed .footer-company-name{
+    font-family: 'Chakra Petch', sans-serif;
 	color:  #8f9296;
 	font-size: 80%;
 	font-weight: normal;
@@ -257,6 +263,7 @@ footer {
 }
 
 .footer-distributed .footer-center p{
+    font-family: 'Chakra Petch', sans-serif;
 	display: inline-block;
 	color: #ffffff;
 	vertical-align: middle;
@@ -264,6 +271,7 @@ footer {
 }
 
 .footer-distributed .footer-center p span{
+    font-family: 'Chakra Petch', sans-serif;
 	display:block;
 	font-weight: normal;
 	font-size:14px;
@@ -271,6 +279,7 @@ footer {
 }
 
 .footer-distributed .footer-center p a{
+    font-family: 'Chakra Petch', sans-serif;
 	color:  #5383d3;
 	text-decoration: none;;
 }
@@ -283,6 +292,7 @@ footer {
 }
 
 .footer-distributed .footer-company-about{
+    font-family: 'Chakra Petch', sans-serif;
 	line-height: 20px;
 	color:  #92999f;
 	font-size: 13px;
@@ -291,6 +301,7 @@ footer {
 }
 
 .footer-distributed .footer-company-about span{
+    font-family: 'Chakra Petch', sans-serif;
 	display: block;
 	color:  #ffffff;
 	font-size: 80%;
@@ -303,6 +314,7 @@ footer {
 }
 
 .footer-distributed .footer-icons a{
+    font-family: 'Chakra Petch', sans-serif;
 	display: inline-block;
 	width: 35px;
 	height: 35px;
