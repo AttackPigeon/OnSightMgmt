@@ -89,62 +89,62 @@ function onClockIn(){
 
 // Code for timer begin-Jenn
 // code will run as soon as the page loads
-window.onload = function() {
+// window.onload = function() {
   
-  $("#stop").on("click", stop);
-  $("#reset").on("click", reset);
-  $("#start").on("click", start);
-};
+//   $("#stop").on("click", stop);
+//   $("#reset").on("click", reset);
+//   $("#start").on("click", start);
+// };
 
 //  Variable that will hold our setInterval that runs the timer
 var intervalId;
-// prevents the clock from being sped up unnecessarily
-var clockRunning = false;
-var time = 0;
+// // prevents the clock from being sped up unnecessarily
+// var clockRunning = false;
+// var time = 0;
 
-// Functions:
+// // Functions:
 
-// Reset
-function reset() {
-  time = 0;
-  $("#display").text("00:00");
-}
-// Start
-function start() {
-  if (!clockRunning) {
-    intervalId = setInterval(count, 1000);
-    clockRunning = true;
-  }
-}
+// // Reset
+// function reset() {
+//   time = 0;
+//   $("#display").text("00:00");
+// }
+// // Start
+// function start() {
+//   if (!clockRunning) {
+//     intervalId = setInterval(count, 1000);
+//     clockRunning = true;
+//   }
+// }
 // Stop
-function stop() {
-  clearInterval(intervalId);
-  clockRunning = false;
-}
-// Count
-function count() {
-  time++;
+// function stop() {
+//   clearInterval(intervalId);
+//   clockRunning = false;
+// }
+// // Count
+// function count() {
+//   time++;
 
-  var converted = timeConverter(time);
+//   var converted = timeConverter(time);
   
-  console.log(converted);
-  $("#display").text(converted);
-}
+//   console.log(converted);
+//   $("#display").text(converted);
+// }
 // Convert 
-function timeConverter(t) {
+// function timeConverter(t) {
 
-  var minutes = Math.floor(t / 60);
-  var seconds = t - (minutes * 60);
+//   var minutes = Math.floor(t / 60);
+//   var seconds = t - (minutes * 60);
 
-  if (seconds < 10) {
-    seconds = "0" + seconds;
-  }
-  if (minutes === 0) {
-    minutes = "00";
-  }
-  else if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-  return minutes + ":" + seconds;
-}
+//   if (seconds < 10) {
+//     seconds = "0" + seconds;
+//   }
+//   if (minutes === 0) {
+//     minutes = "00";
+//   }
+//   else if (minutes < 10) {
+//     minutes = "0" + minutes;
+//   }
+//   return minutes + ":" + seconds;
+// }
 // Code for timer end-Jenn

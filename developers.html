@@ -1,4 +1,4 @@
-<!--Chi Njoku, Arthur Spence, Jenn Stuart, Ron Becker
+<!--, , , Ron Becker
     Project 1
     UTexas PTF Coding 2019 -->
 
@@ -8,23 +8,22 @@
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width" initial-scale=1.0>
                         <title> Developers | OnSightMgmt</title>
-                 <!-- no css reset bc normalize feature integrated into bootstrap -->
+    <!-- no css reset bc normalize feature integrated into bootstrap -->
                 
-                    <!-- link to google fonts to make text thoroughly awesome -->
+            <!-- link to google fonts to make text thoroughly awesome -->
             <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Chakra+Petch|Cormorant+Garamond|Neuton|Special+Elite&display=swap" rel="stylesheet">
                     <!-- link to bootstrap  -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
                     <!-- link to materialize-->
             <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-                    <!-- three font awesome links -->
-          <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+                    <!-- link to my CSS style sheet -->
+            <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+                  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
           <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                  <!-- link to my CSS style sheet -->
-          <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         </head>
             
-    <body>
+    <body style="height: 250%;">
         <header class="header">
             <div class="container-fluid">
                                 <!--Setting up navbar contents-->
@@ -42,7 +41,7 @@
                                                 <a class="nav-link" href="index.html">Home</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+                                                <a class="nav-link" href="about.html">About</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="future.html">Future</a>
@@ -66,13 +65,13 @@
               float: left;
               position: relative;
               margin-left: 4%;
-              margin-top: 5%;
-              margin-bottom: 10%;
+             margin-bottom: 14%;
        
             }
             #developersCards{
-                margin-top: 12%;
+                margin-top: 5%;
             text-align:center; 
+            margin-bottom: 5%;
             background-color: Black; 
             opacity: 0.75;
             border-bottom: 20%;
@@ -82,7 +81,7 @@
             border-color: black; 
             border-style: solid; 
             border-width: .025; width: 30%;
-            height: 16%; 
+            height: 1%; 
             align-content: center;
             color: #ffc107;
         
@@ -104,8 +103,9 @@
                 }
             #cardBackground{
                 background: gray;
-                margin-top: -5%;
-                height: 100%;
+                margin-top: 7.5%;
+               margin-bottom: 10%;
+               height: 5%;
             }
             
             .title {
@@ -138,14 +138,20 @@
             button:hover, a:hover {
               opacity: 0.7;
             }
+            @media (min-width: 400px) { 
+                 navbar{
+                   height: 100px;
+                 }
+            }  
+            }
             </style>
             </head>
             <body>
             
            
-           <div id="cardBackground" style="background-color: black; height: 50%;">
-            <h1 id="developersCards">Developers</h1>
-            <div class="card" style="width:20%";>
+           <div id="cardBackground" style="background-color: black;">
+        
+            <div class="card" >
                 <img class="photo"; src="assets\images\developer photos\ChineduNjoku1.jpg" alt="John">
                 <h4 class="johnDoe">Chi Njoku</h4>
                 <p class="title">JavaScipt Developer</p>
@@ -160,7 +166,7 @@
               </div>
 
             
-              <div class="card" style="width:20%";>
+              <div class="card">
                 <img class="photo"; src="assets\images\developer photos\arthurSpence.jpg" alt="John">
                 <h4 class="johnDoe">Arthur Spence</h4>
                 <p class="title">JS and Firebase Developer</p>
@@ -174,7 +180,7 @@
                 <p><button>Contact</button></p>
               </div>
 
-              <div class="card" style="width:20%";>
+              <div class="card" >
                 <img class="photo"; src="assets\images\developer photos\Jenn.jpg" alt="John">
                 <h4 class="johnDoe">Jenn Stuart</h4>
                 <p class="title">CSS/JS Developer</p>
@@ -189,7 +195,7 @@
               </div>
 
 
-              <div class="card" style="width:20%";>
+              <div class="card">
                 <img class="photo"; src="assets\images\developer photos\kcbeck photo.jpg" alt="John">
                 <h4 class="johnDoe">KC Beck</h4>
                 <p class="title">Creative Developer</p>
@@ -212,67 +218,71 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <!-- link to my jscript code -->
       <script src="assets/javascript/app.js" type="text/javascript"></script>
+           
+
       <footer>
-            <footer class="footer-distributed">
-        
-                <div class="footer-left" style="margin-bottom: 125px;">
-        
-                    <h3 style="margin-top: -190px; font-family: 'Chakra Petch', sans-serif;">Onsight<span>MGMT</span></h3>
-        
-                    <p style="margin-top: -1px;" class="footer-links">
-                        <a href="#">Home</a>
-                        ·
-                        <a href="#">Blog</a>
-                        ·
-                        <a href="#">Pricing</a>
-                        ·
-                        <a href="#">About</a>
-                        ·
-                        <a href="#">Faq</a>
-                        ·
-                        <a href="#">Contact</a>
-                    </p>
-        
-                    <p class="footer-company-name" >OnSight Development Project &copy; 2019</p>
-                </div>
-        
-                <div class="footer-center" style=" margin-bottom: 200px">
-        
-                    <div>
-                        <i class="fa fa-map-marker"></i>
-                        <p ><span>2405 Robert Dedman Dr, </span> Austin, TX 78712</p>
-                    </div>
-        
-                    <div>
-                        <i class="fa fa-phone"></i>
-                        <p >1-800-on-site</p>
-                    </div>
-        
-                    <div>
-                        <i class="fa fa-envelope"></i>
-                        <p ><a href="mailto:onsight@onsight.com">onsite@onsite.com</a></p>
-                    </div>
-        
-                </div>
-        
-                <div class="footer-right" style=" margin-bottom: 120px">
-        
-                    <p class="footer-company-about">
-                        <span>About the company</span>
-                        We are the Payroll and Training Tracking APP
-                    </p>
-        
-                    <div class="footer-icons" style="margin-bottom: 30px;">
-        
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-github"></i></a>
-        
-                    </div>
-                           </div>
-        
+     
+          <footer class="footer-distributed">
           
-        </footer>
+              <div class="footer-left">
+          
+                  <h3 style="font-family: 'Chakra Petch', sans-serif;">Onsight<span>logo</span></h3>
+          
+                <p class="footer-links">
+                  <a href="#">Home</a>
+                  ·
+                  <a href="#">Blog</a>
+                  ·
+                  <a href="#">Pricing</a>
+                  ·
+                  <a href="#">About</a>
+                  ·
+                  <a href="#">Faq</a>
+                  ·
+                  <a href="#">Contact</a>
+                </p>
+          
+               
+              </div>
+          
+              <div class="footer-center">
+          
+                  <div>
+                   <p ><span>2405 Robert Dedman Dr, </span> Austin, TX 78712</p>
+                  </div>
+          
+                <div>
+                  
+                    <p >1-800-on-site</p>
+                </div>
+               
+          
+                <div>
+             
+                  <p ><a style="margin-bottom: 1%;" href="mailto:onsight@onsight.com">onsite@onsite.com</a></p>
+                </div>
+          
+              </div>
+          
+              <div class="footer-right">
+          
+                  <p class="footer-company-about">
+                      <span style="margin-top: 4%;">About the company</span>
+                      We are the Payroll and Training Tracking APP
+                  </p>
+                <div class="footer-icons">
+          
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-github"></i></a>
+          
+                </div>
+          
+              </div>
+          
+            </footer>
+    
+    
         </body>
         </html>

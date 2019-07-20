@@ -6,13 +6,16 @@
    font-family: 'Chakra Petch', sans-serif;
    font-family: 'Allerta Stencil', sans-serif; */
 
+
+/* header style sheet */
+
 html, body {
     margin: 0;
     padding: 0;
     font-family:'Allerta Stencil', sans-serif;
     line-height: 1.5;
     color: whitesmoke;
-    height: 100%;
+    height: 1000px;
     /*Scale image based on window size*/
     background-image: url("../images/background/background.jpg") ;
     background-repeat: no-repeat;
@@ -28,9 +31,10 @@ html, body {
 }
 footer {
     font-family: 'Chakra Petch', sans-serif;
+    opacity: .93;
     margin-top: 5%;
     text-align: center;
-    font-size: 50%;
+    font-size: 98%;
 }
 
 /* Classes */
@@ -41,6 +45,7 @@ footer {
 .navbar {
     height: 15%;
     padding: 0px 1% 0px 0px;
+    opacity: .89;
     /* position: fixed; */
     position:fixed;
     z-index: +2;
@@ -62,15 +67,38 @@ footer {
     text-align: center;
     margin: auto;
     font-size: 320%;
-
 }
+@media only screen and (max-width: 900px) {
+   .navbar-text {
+      width: 100%;
+          left: 0;
+          text-align: center;
+          margin: auto;
+          font-size: 240%;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .navbar-text {
+       width: 100%;
+           left: 0;
+           text-align: center;
+           margin: auto;
+           font-size: 140%;
+    }
+        .card{
+            margin-top: 20%;
+            margin-bottom: 14%;
+        }
+    
+   }
+
 /* Dropdown Button */
 .dropbtn {
     font-family: 'Chakra Petch', sans-serif;
     background-color: #3498DB;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 1.2em;
+    font-size: 100%;
     border: none;
     cursor: pointer;
   }
@@ -143,19 +171,18 @@ footer {
 
 /* CSS FOoter Code */
 .footer-distributed{
-    font-family: 'Chakra Petch', sans-serif;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+ position: fixed;
+ bottom: 0;
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
-    width: 100%;
-    height: 20%;
+	width: 100%;
 	text-align: left;
-	font: bold 16px sans-serif;
-	padding: 5px 5px;
-    margin-top: 3%;
+	font: bold 100% sans-serif;
+    padding-left: 1%;
+    padding-top: -1%;
+ 
+  
 }
 
 .footer-distributed .footer-left,
@@ -168,35 +195,30 @@ footer {
 /* Footer left */
 
 .footer-distributed .footer-left{
-    width: 40%;
+	width: 40%;
 }
 
 /* The company logo */
 
 .footer-distributed h3{
-    font-family: 'Chakra Petch', sans-serif;
-    /* Ron if you still want this to be in 'cookie, cursive' as the font family I can grab the link to embed off googe fonts let me know */
 	color:  #ffffff;
-	font: normal 36px;
+	font: normal 100% 'Cookie', cursive;
 	margin: 0;
 }
 
 .footer-distributed h3 span{
-    font-family: 'Chakra Petch', sans-serif;
 	color:  #5383d3;
 }
 
 /* Footer links */
 
 .footer-distributed .footer-links{
-    font-family: 'Chakra Petch', sans-serif;
 	color:  #ffffff;
-	margin: 20px 0 12px;
+	margin: 5% 0 1em;
 	padding: 0;
 }
 
 .footer-distributed .footer-links a{
-   
 	display:inline-block;
 	line-height: 1.8;
 	text-decoration: none;
@@ -204,9 +226,8 @@ footer {
 }
 
 .footer-distributed .footer-company-name{
-    font-family: 'Chakra Petch', sans-serif;
 	color:  #8f9296;
-	font-size: 14px;
+	font-size: 80%;
 	font-weight: normal;
 	margin: 0;
 }
@@ -220,23 +241,22 @@ footer {
 .footer-distributed .footer-center i{
 	background-color:  #33383b;
 	color: #ffffff;
-    font-size: 25px;
-	width: 38px;
-	height: 38px;
+	font-size: 80%;
+	width: 100%;
+	height: 150%;
 	border-radius: 50%;
 	text-align: center;
-	line-height: 25px;
-	margin:2px 40px;
+	line-height: 42px;
+	margin: 10px 15px;
 	vertical-align: middle;
 }
 
 .footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
+	font-size: 1.0em;
+	line-height: 1.0em;
 }
 
 .footer-distributed .footer-center p{
-    font-family: 'Chakra Petch', sans-serif;
 	display: inline-block;
 	color: #ffffff;
 	vertical-align: middle;
@@ -244,7 +264,6 @@ footer {
 }
 
 .footer-distributed .footer-center p span{
-    font-family: 'Chakra Petch', sans-serif;
 	display:block;
 	font-weight: normal;
 	font-size:14px;
@@ -253,8 +272,7 @@ footer {
 
 .footer-distributed .footer-center p a{
 	color:  #5383d3;
-    text-decoration: none;
-    font-family: 'Chakra Petch', sans-serif;
+	text-decoration: none;;
 }
 
 
@@ -265,7 +283,6 @@ footer {
 }
 
 .footer-distributed .footer-company-about{
-    font-family: 'Chakra Petch', sans-serif;
 	line-height: 20px;
 	color:  #92999f;
 	font-size: 13px;
@@ -274,10 +291,9 @@ footer {
 }
 
 .footer-distributed .footer-company-about span{
-    font-family: 'Chakra Petch', sans-serif;
 	display: block;
 	color:  #ffffff;
-	font-size: 14px;
+	font-size: 80%;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
@@ -293,14 +309,12 @@ footer {
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 2px;
-
-	font-size: 20px;
+	font-size: 105%;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
 	margin-right: 3px;
-	margin-bottom: 60px;
+	margin-bottom: 5px;
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
@@ -308,16 +322,29 @@ footer {
 @media (max-width: 880px) {
 
 	.footer-distributed{
-		font: bold 14px;
-	}
+        font: bold 100% sans-serif;
+        position: fixed;
+        margin-bottom:-80%;
+    }
+    h4{
+        font-size: 90%;
+    }
+    h3 {font-size: 75%;
+    }
+    h2 {
+        font-size: 55%;
+    }
+    h1 {
+        font-size: 40%;
+    }
 
 	.footer-distributed .footer-left,
 	.footer-distributed .footer-center,
 	.footer-distributed .footer-right{
+        
 		display: block;
 		width: 100%;
-		margin-bottom: 80%;
-		text-align: top;
+	text-align: center;
 	}
 
 	.footer-distributed .footer-center i{

@@ -9,78 +9,132 @@
       <meta name="viewport" content="width=device-width" initial-scale=1.0>
                     <title>Home | OnSightMgmt</title>
  <!-- no css reset bc normalize feature integrated into bootstrap -->
-
-            <!-- Required Firebase tags -->
-            <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
-                
+                 <!-- Required Firebase tags -->
+            <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+             
             <!-- link to google fonts to make text thoroughly awesome -->
             <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Chakra+Petch|Cormorant+Garamond|Neuton|Special+Elite&display=swap" rel="stylesheet">
 
 <!-- WHY DO WE HAVE TWO DIFFERENT VERSIONS OF BOOTSTRAP-ONE IN HEAD AND ONE AS SCRIPT TAG AT END? -->
                     <!-- links to bootstrap  --> 
                     <!-- bootstrap js bundle -->
-            <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script> -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
                  <!-- bootstrap javascript -->
-            <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
                     <!-- bootstrap CSS -->
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-                     <!-- link to jquery -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-                    <!-- link to materialize-->
-            <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-                    
-
+                    <!-- link to jquery -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+                   <!-- link to materialize-->
+           <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+                   
+           
                     <!-- Bootstrap Font awesome -->
-            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+                    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
                     <!-- removed (2) links below with no changes -->
             <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
             <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
-
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <!-- link to materialize-->
+          <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <!-- a large amount of font awesome links-do we need all these? -->
+          <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+          <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- link to jquery -->
                 <!-- link to my CSS style sheet-always LAST -->
             <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+  
+ <header class="header">
+            <div class="container-fluid">
+                                <!--Setting up navbar contents-->
+                <nav class="navbar nav-wrapper navbar-expand-sm bg-warning">
+                    <a id="main-heading" href="index.html"><img class="logo" src="assets\images\logo\logo.png"style=" alt="LOGO"></a>
+                    <span class= "navbar-text text-dark">OnSight Management</span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                                    </button>
+            
+                                    <!--Navbar collapseable menu conents-->
+                                    <div class="collapse navbar-collapse" id="navbarContent">
+                                        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="about.html">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-muted" href="#">Future</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="developers.html">Developers</a>
+                                          </li>
+                                        </ul>
+                                    </div>
+                </nav> 
+            </div>
+        </header>
+        
 
-<body>
-    <header class="header">
-        <div class="container-fluid">
-
-                    <!--Setting up navbar contents-->
-                    <nav class="navbar nav-wrapper navbar-expand-sm bg-warning">
-                        <a id="main-heading" href="index.html" ><img class="logo" src="assets\images\logo\logo.png" alt="LOGO"></a>
-                        <span class= "navbar-text text-dark">OnSight Management</span>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <!--Navbar collapseable menu conents-->
-                        <div class="collapse navbar-collapse" id="navbarContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link text-muted">Home<span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="future.html">Future</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="developers.html">Developers</a>
-                                </li>
-                            </ul>
-                        </div>
-                    
-                    </nav> 
+    <div class="row" style="width: 80%; margin-top: 10%; margin-left: 10%; margin-right:10% !important;">
+        <div class="col-md-12" >
+          <!-- Add Employee  -->
+          <div class="card mb-4">
+            <div class="card-header" style="width: 80%; margin-left: 10%; margin-right:10% !important;"  >Add Employee</div>
+            <div class="card-body" style="width: 80%; margin-left: 10%; margin-right:10% !important;">
+    
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group" style="width: 80%; margin-left: 10%; margin-right:10%  !important;">
+                  <label for="employee-name-input" style="width: 80%; margin-left: 10%; margin-right:10% !important;">Employee ID</label>
+                  <input class="form-control" id="employee-id-input" placeholder="51" type="number" >
+                </div>
+                <div class="form-group" style="width: 80%; margin-left: 10%; margin-right:10% !important;">
+                  <label for="role-input" style="width: 80%; margin-left: 10%; margin-right:10% !important;">Employee Name</label>
+                  <input class="form-control" id="employee-name-input" placeholder="Jane Doe" type="text">
+                </div>
+                <div id= "visuals">
+                  <a href="results.html" class="btn btn-primary" role="button"> View Employee Results </a>
+                  <!-- <br>
+                  <br>
+                  <a href="maps.html" class="btn btn-primary" role="button"> View Employee Location </a>
+                  <br> 
+                  <br> -->
+              </div>
+                <!-- <div class="form-group">
+                  <label for="start-input">Start Time</label>
+                  <input class="form-control" id="start-input" placeholder="HH:mm" type="date-time">
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Hourly Rate</label>
+                  <input class="form-control" id="rate-input" placeholder="36" type="number"> -->
+                </div>
+                <button class="btn btn-primary float-right" onclick="onClockIn()" id="add-employee-btn">Submit</button>
+              </form>
+    
+            </div>
           </div>
-    </header>
-<br>
-<br>
-<br>
-<br>
-<div id="dropdowndiv" class="container">
+        </div>
+      </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="dropdowndiv" class="container">
     <div class="dropdown">
       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Employee List
       <span class="caret"></span></button>
@@ -103,99 +157,192 @@
         <li><a id="michaelJackson" href="#">Michael Jackson</a></li>
         <li><a id="michaelVick" href="#">Michael Vick</a></li>
       </ul>
+     -->
+ 
+     <!-- <div id="display" class="boldest">00:00</div> -->
+     
+       <!-- <div id="buttons"> -->
+           <!-- someone add reference to onclick to trigger geolocation -->
+         <!-- <button id="start" onclick="onClockIn" class="btn btn-primary">Employee Clock In</button>
+         <button id="stop" class="btn btn-primary">Employee Clock Out</button>
+         <button id="reset" class="btn btn-primary">Clear Time</button>
+       </div>
+     </div> -->
+ 
+   </div>
+   <script>
+    // Steps to complete:
+  
+  // 1. Initialize Firebase
+  // 2. Create button for adding new employees - then update the html + update the database
+  // 3. Create a way to retrieve employees from the employee database.
+  // 4. Create a way to calculate the months worked. Using difference between start and current time.
+  //    Then use moment.js formatting to set difference in months.
+  // 5. Calculate Total billed
+  
+  // 1. Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyDBx5u4rSdOw4OV1mom78WhUzNtnkLBiRA",
+    authDomain: "onsight-app-2ace8.firebaseapp.com",
+    databaseURL: "https://onsight-app-2ace8.firebaseio.com",
+    projectId: "onsight-app-2ace8",
+    storageBucket: "",
+    messagingSenderId: "693732910068",
+    appId: "1:693732910068:web:37dbf37636631e78"
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  
+  var database = firebase.database();
+  // 2. Button for adding Employees
+  $("#add-employee-btn").on("click", function(event) {
+    event.preventDefault();
+  
+    // Grabs user input
+    var empID = $("#employee-id-input").val().trim();
+    var empName = $("#employee-name-input").val().trim();
+    // var empStart = $("#start-input").val().trim();
+    // var empRate = $("#rate-input").val().trim();
+  
+    // var formatedDate = moment(empStart, "hh:mm").format("HH:mm");
+    // console.log(formatedDate)
+  
+    console.log(empID)
+  
+    // Creates local "temporary" object for holding employee data
+    var newEmp = {
+      id: empID,
+      name: empName,
+      // start: empStart,
+    //   rate: empRate
+    };
+  
+    // Uploads employee data to the database
+    database.ref().push(newEmp);
+  
+    // Logs everything to console
+    console.log(newEmp.ID);
+    console.log(newEmp.Name);
+    // console.log(newEmp.start);
+    // console.log(newEmp.rate);
+  
+    // alert("Employee successfully added");
+  
+    // Clears all of the text-boxes
+    $("#employee-id-input").val("");
+    $("#employee-name-input").val("");
+    // $("#start-input").val("");
+    // $("#rate-input").val("");
+  });
+  
+  // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
+  database.ref().on("child_added", function(childSnapshot) {
+    console.log(childSnapshot.val());
+  
+    // Store everything into a variable.
+    var empID = childSnapshot.val().id;
+    var empName = childSnapshot.val().name;
+    // var empStart = childSnapshot.val().start;
+    // var empRate = childSnapshot.val().rate;
+  
+    // Employee Info
+    console.log(empID);
+    console.log(empName);
+    // console.log(empStart);
+    // console.log(empRate);
+  
+    // Prettify the employee start
+    // var empStartPretty = moment.unix(empStart).format("HH:mm");
+  
+    // Calculate the months worked using hardcore math
+    // To calculate the months worked
+    // var empMonths = moment().diff(moment(empStart, "X"), "hours");
+    // console.log(empMonths);
+  
+    // Calculate the total billed rate
+    // var empBilled = empMonths * empRate;
+    // console.log(empBilled);
+  
+    // Create the new row
+    var newRow = $("<tr>");
     
-    <br>
-    <br>
-    <div>
-    <div id="display" class="boldest">00:00</div>
-    <br>
-    <br>
-      <div id="buttons">
-          <!-- someone add reference to onclick to trigger geolocation -->
-        <button id="start" onclick="onClockIn" class="btn btn-primary">Employee Clock In</button>
-        <button id="stop" class="btn btn-primary">Employee Clock Out</button>
-        <button id="reset" class="btn btn-primary">Clear Time</button>
-      </div>
-    </div>
-    <br> 
-    <br>
-    <div id= "visuals">
-        <a href="results.html" class="btn btn-primary" role="button"> View Employee Results </a>
-        <br>
-        <br>
-        <a href="maps.html" class="btn btn-primary" role="button"> View Employee Location </a>
-        <br> 
-        <br>
-    </div>
-   
-  </div>
+     newRow.append($("<td>").text(empName));
+     newRow.append($("<td>").text(empID));
+    //  newRow.append($("<td>").text(empStartPretty));
+    //  newRow.append($("<td>").text(empStart));
+    //  newRow.append($("<td>").text(empRate));
+    //  newRow.append($("<td>").text(empBilled));
+      
+    
   
-  
+    // Append the new row to the table
+    $("#employee-table > tbody").append(newRow);
+  });
+  </script>
+
 
 <footer>
-    <footer class="footer-distributed">
+     
+<footer class="footer-distributed">
 
-        <div class="footer-left" style="margin-bottom: 125px;">
+    <div class="footer-left">
 
-            <h3 style="margin-top: -190px; font-family: 'Chakra Petch', sans-serif;">Onsight<span>logo</span></h3>
+        <h3 style="font-family: 'Chakra Petch', sans-serif;">Onsight<span>logo</span></h3>
 
-            <p style="margin-top: -1px;" class="footer-links">
-                <a href="#">Home</a>
-                ·
-                <a href="#">Blog</a>
-                ·
-                <a href="#">Pricing</a>
-                ·
-                <a href="#">About</a>
-                ·
-                <a href="#">Faq</a>
-                ·
-                <a href="#">Contact</a>
-            </p>
+      <p class="footer-links">
+        <a href="#">Home</a>
+        ·
+        <a href="#">Blog</a>
+        ·
+        <a href="#">Pricing</a>
+        ·
+        <a href="#">About</a>
+        ·
+        <a href="#">Faq</a>
+        ·
+        <a href="#">Contact</a>
+      </p>
 
-            <p class="footer-company-name" >OnSight Development Project &copy; 2019</p>
+     
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+         <p ><span>2405 Robert Dedman Dr, </span> Austin, TX 78712</p>
         </div>
 
-        <div class="footer-center" style=" margin-bottom: 200px">
+      <div>
+        
+          <p >1-800-on-site</p>
+      </div>
+     
 
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p ><span>2405 Robert Dedman Dr, </span> Austin, TX 78712</p>
-            </div>
+      <div>
+   
+        <p ><a style="margin-bottom: 1%;" href="mailto:onsight@onsight.com">onsite@onsite.com</a></p>
+      </div>
 
-            <div>
-                <i class="fa fa-phone"></i>
-                <p >1-800-on-site</p>
-            </div>
+    </div>
 
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p ><a href="mailto:onsight@onsight.com">onsite@onsite.com</a></p>
-            </div>
+    <div class="footer-right">
 
-        </div>
+        <p class="footer-company-about">
+            <span style="margin-top: 4%;">About the company</span>
+            We are the Payroll and Training Tracking APP
+        </p>
+      <div class="footer-icons">
 
-        <div class="footer-right" style=" margin-bottom: 120px">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
 
-            <p class="footer-company-about">
-                <span>About the company</span>
-                We are the Payroll and Training Tracking APP
-            </p>
+      </div>
 
-            <div class="footer-icons" style="margin-bottom: 30px;">
+    </div>
 
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
-
-            </div>
-
-        </div>
-
-  
-</footer>
-
+  </footer>
 
 
 <!-- SHOULD THESE ALL BE AT THE BOTTOM? -->
@@ -206,8 +353,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <!-- link to my jscript code -->
 <script src="assets/javascript/app.js" type="text/javascript"></script>
+
 <!-- REMOVED WITH NO ALTERATIONS TO PAGE -->
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
 </body>
+
 </html>
